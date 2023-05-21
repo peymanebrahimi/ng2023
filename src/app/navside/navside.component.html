@@ -1,0 +1,80 @@
+<mat-nav-list>
+  <a mat-list-item [routerLink]="['/mongo']">
+    <mat-icon matListIcon>explore</mat-icon>
+    <span >mongo</span>
+  </a>
+  <a mat-list-item [matMenuTriggerFor]="menuBackApp">
+    <mat-icon matListIcon>settings_input_component</mat-icon>
+    <span >backapp</span>
+  </a>
+  <a mat-list-item [routerLink]="['/ContentProjection']">
+    <mat-icon matListIcon>mediation</mat-icon>
+    <span >Content Projection</span>
+  </a>
+  <a mat-list-item [routerLink]="['/ngTemplate']">
+    <mat-icon matListIcon>perm_media</mat-icon>
+    <span>Ng Template</span>
+  </a>
+  <a mat-list-item [routerLink]="['/reactive']">
+    <mat-icon matListIcon>quickreply</mat-icon>
+    <span>Rxjs 6</span>
+  </a>
+  <a mat-list-item [routerLink]="['/worldcity']">
+    <mat-icon matListIcon>language</mat-icon> 
+    <span >World City</span>
+  </a>
+  <a mat-list-item [routerLink]="['/health-check']">
+    <mat-icon matListIcon>model_training</mat-icon>
+    <span >Health Check</span>
+  </a>
+<!--
+  <ng-container *ngIf="!(isAuthenticated | async)">
+
+    <a mat-list-item [routerLink]='["/authentication/login"]'>
+      <mat-icon matListIcon>fingerprint</mat-icon>
+      <span >Login</span>
+    </a>
+  </ng-container>
+
+  <ng-container *ngIf="isAuthenticated | async">
+
+    <a mat-list-item [matMenuTriggerFor]="menuTesting">
+      <mat-icon matListIcon>pending_actions</mat-icon>
+      <span>Testing</span>
+    </a>
+
+    <mat-menu #menuTesting="matMenu">
+      <button mat-menu-item routerLink="/testing/user1" routerLinkActive="active">
+        <mat-icon matListIcon>perm_identity</mat-icon>
+        <span>User1</span>
+      </button>
+      <button mat-menu-item routerLink="/testing/authModel" routerLinkActive="active">
+        <mat-icon matListIcon>supervisor_account</mat-icon>
+        <span> Auth Model</span>
+      </button>
+    </mat-menu>
+
+    <a mat-list-item [routerLink]='["/authentication/logout"]' [state]='{ local: true }'>
+      <mat-icon matListIcon>power_settings_new </mat-icon>
+      <span >Logout</span>
+    </a>
+
+  </ng-container>
+-->
+</mat-nav-list>
+
+
+<mat-menu #menuBackApp="matMenu">
+  <button mat-menu-item routerLink="/backapp/todo" routerLinkActive="active">
+    <mat-icon matListIcon>alarm_on</mat-icon>
+    <span >ToDo</span>
+  </button>
+  <button mat-menu-item routerLink="/backapp/signalrchart" routerLinkActive="active">
+    <mat-icon matListIcon>insert_chart</mat-icon>
+    <span >SignalR Chart</span>
+  </button>
+  <button mat-menu-item routerLink="/backapp/signalrnews" routerLinkActive="active">
+    <mat-icon matListIcon>swap_vertical_circle</mat-icon>
+    <span >SignalR News</span>
+  </button>
+</mat-menu>
